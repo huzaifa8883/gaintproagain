@@ -57,7 +57,7 @@ async def start(update: Update, context: CallbackContext):
     chat_id = update.message.chat_id
     if chat_id not in subscribed_users:
         subscribed_users.add(chat_id)
-        await update.message.reply_text("✅ You have subscribed to trade signals. You'll receive updates every 1 minute.")
+        await update.message.reply_text("✅ You have subscribed to trade signals. You'll receive updates every 5 minute.")
     else:
         await update.message.reply_text("🔔 You are already subscribed!")
 
